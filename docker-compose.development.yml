@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.9"
 
 networks:
     app_network:
@@ -7,8 +7,8 @@ networks:
 services:
     nginx:
         build:
-            context: .
-            dockerfile: nginx.dockerfile
+            context: ./services/nginx/
+            dockerfile: nginx.dockerfile.development
             args:
                 - NGINXUSER=${NGINXUSER:-www-data}
                 - NGINXGROUP=${NGINXGROUP:-www-data}
@@ -27,7 +27,7 @@ services:
             - app_network
 
     mysql:
-        image: mysql:8.0.26
+        image: mysql:8.0.23
         container_name: ${APP_NAME}_mysql
         hostname: mysql
         restart: unless-stopped
@@ -42,14 +42,41 @@ services:
             - SERVICE_TAGS=dev
             - SERVICE_NAME=mysql
         volumes:
-            - ./mysql/data:/var/lib/mysql
+            - ./services/mysql/data:/var/lib/mysql
         networks:
             - app_network
 
+    phpmyadmin:
+        image: phpmyadmin
+        container_name: ${APP_NAME}_phpmyadmin
+        hostname: phpmyadmin
+        restart: unless-stopped
+        ports:
+            - 8888:80
+        environment:
+            - PMA_ARBITRARY=0
+            - PMA_HOST=127.0.0.1
+            - PMA_VERBOSE=mysql
+            - PMA_PORT=${DB_PORT}
+            - PMA_USER=${DB_USERNAME}
+            - PMA_PASSWORD=${DB_PASSWORD}
+        profiles:
+            - donotstart
+
+    adminer:
+        image: adminer
+        container_name: ${APP_NAME}_adminer
+        hostname: adminer
+        restart: unless-stopped
+        ports:
+            - 8889:8080
+        profiles:
+            - donotstart
+
     php:
         build:
-            context: .
-            dockerfile: php.dockerfile
+            context: ./services/php/
+            dockerfile: php.dockerfile.development
             args:
                 - PHPUSER=${PHPUSER:-www-data}
                 - PHPGROUP=${PHPGROUP:-www-data}
@@ -72,8 +99,8 @@ services:
 
     composer:
         build:
-            context: .
-            dockerfile: composer.dockerfile
+            context: ./services/composer/
+            dockerfile: composer.dockerfile.development
             args:
                 - PHPUSER=${PHPUSER:-www-data}
                 - PHPGROUP=${PHPGROUP:-www-data}
@@ -104,8 +131,8 @@ services:
 
     artisan:
         build:
-            context: .
-            dockerfile: php.dockerfile
+            context: ./services/php/
+            dockerfile: php.dockerfile.development
             args:
                 - PHPUSER=${PHPUSER:-www-data}
                 - PHPGROUP=${PHPGROUP:-www-data}
