@@ -1,23 +1,27 @@
-up: 
+compose-up: 
 	- docker-compose -f docker-compose.development.yml up
-up-d:
+compose-up-d:
 	- docker-compose -f docker-compose.development.yml up -d
-down:
+compose-down:
 	- docker-compose -f docker-compose.development.yml down
-destroy:
+compose-destroy:
 	- docker-compose -f docker-compose.development.yml down --rmi local
-start:
+compose-start:
 	- docker-compose -f docker-compose.development.yml start
-stop:
+compose-stop:
 	- docker-compose -f docker-compose.development.yml stop
-check-container:
+compose-ps:
 	- docker ps
+composer-require:
+	- docker-compose -f docker-compose.development.yml run --rm composer require
 composer-update:
 	- docker-compose -f docker-compose.development.yml run --rm composer update
-node-install:
-	- docker-compose -f docker-compose.development.yml run --rm node install
-node-build:
-	- docker-compose -f docker-compose.development.yml run --rm node run dev
+composer-dump-autoload:
+	- docker-compose -f docker-compose.development.yml run --rm composer dump-autoload
+npm-install:
+	- docker-compose -f docker-compose.development.yml run --rm npm install
+npm-run-dev:
+	- docker-compose -f docker-compose.development.yml run --rm npm run dev
 artisan-migrate:
 	- docker-compose -f docker-compose.development.yml run --rm artisan migrate
 artisan-migrate-fresh:

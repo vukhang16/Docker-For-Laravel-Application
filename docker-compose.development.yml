@@ -116,7 +116,7 @@ services:
         networks:
             - app_network
 
-    node:
+    npm:
         image: node:14.17.5
         container_name: ${APP_NAME}_node
         volumes:
