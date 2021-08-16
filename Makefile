@@ -1,10 +1,7 @@
 include ./Makefiles/*.mk
 
-run:
-	- make compose-up-d
-stop:
-	- make compose-stop
-check:
-	- make compose-ps
-refresh-db:
-	- make artisan-migrate-fresh-seeder
+up: compose-up-d
+start: compose-start
+stop: compose-stop
+check: compose-ps
+refresh-db: compose-migrate-fresh-seeder
