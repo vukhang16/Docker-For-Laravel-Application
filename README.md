@@ -2,13 +2,23 @@
 
 A pretty simplified Docker Compose workflow that sets up a LEMP network of containers for local Laravel development.
 
-Fork from [docker-compose-laravel](https://github.com/aschmelyun/docker-compose-laravel)
+**_Build by KingNNT_**
+
+### Author's informations:
+
+-   Email: [Dev.KingNNT@gmail.com](mailto:Dev.KingNNT@gmail.com)
+-   Skype: [live:king.nnt](https://join.skype.com/invite/eqRpzcC8cGsf/)
+-   Facebook Profile: [Ninh Ngọc Tuấn](https://www.facebook.com/Kinggg.NNT/)
+-   Facebook Page: [https://www.facebook.com/Dev.KingNNT](https://www.facebook.com/Dev.KingNNT/)
+-   Github Profile: [Ninh Ngọc Tuấn](https://github.com/KingNNT/)
+-   Gitlap Profile: [Ninh Ngọc Tuấn](https://gitlab.com/Dev.KingNNT/)
+-   Bitbucket Profile: [https://bitbucket.org/KingNNT/](https://bitbucket.org/KingNNT/)
 
 ## Usage
 
 To get started, make sure you have [Docker installed](https://docs.docker.com/docker-for-mac/install/) on your system, and then clone this repository.
 
-Next, navigate in your terminal to the directory you cloned this, and spin up the containers for the web server by running `docker-compose up -d --build site`.
+Next, navigate in your terminal to the directory you cloned this, and spin up the containers for the web server by running `docker-compose up -d --build site` or use target `make run`.
 
 After that completes, follow the steps from the [src/README.md](src/README.md) file to get your Laravel project added in (or create a new blank one).
 
@@ -25,6 +35,8 @@ Three additional containers are included that handle Composer, NPM, and Artisan 
 -   `docker-compose run --rm composer update`
 -   `docker-compose run --rm npm run dev`
 -   `docker-compose run --rm artisan migrate`
+
+or use target of `Makefile`
 
 ## Using BrowserSync with Laravel Mix
 
@@ -51,3 +63,4 @@ That should keep a small info pane open in your terminal (which you can exit wit
 The current version of Laravel (8 as of today) uses MailHog as the default application for testing email sending and general SMTP work during local development. Using the provided Docker Hub image, getting an instance set up and ready is simple and straight-forward. The service is included in the `docker-compose.yml` file, and spins up alongside the webserver and database services.
 
 To see the dashboard and view any emails coming through the system, visit [localhost:8025](http://localhost:8025) after running `docker-compose up -d site`.
+
