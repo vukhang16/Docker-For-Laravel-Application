@@ -1,7 +1,9 @@
 include ./Makefiles/*.mk
 
 up: compose-up-d
+down: compose-down-rmi-local
 start: compose-start
 stop: compose-stop
 check: compose-ps
-refresh-db: artisan-migrate-fresh-seeder
+optimize: artisan-optimize-clear
+refresh: artisan-migrate-fresh-seeder
