@@ -1,6 +1,9 @@
 include ./Makefiles/*.mk
 
-up: compose-up-d
+up: 
+	- make compose-up-d
+	- make artisan-storage-link
+	- make refresh
 down: compose-down-rmi-local
 start: compose-start
 stop: compose-stop
