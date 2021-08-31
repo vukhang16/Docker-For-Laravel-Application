@@ -31,6 +31,9 @@ npm-run-dev:
 	- docker-compose -f docker-compose.development.yml run --rm npm run dev
 npm-run-watch:
 	- docker-compose -f docker-compose.development.yml run --rm npm run watch
+npm-run-production:
+	- docker-compose -f docker-compose.development.yml run --rm npm run production
+
 
 artisan:
 	- docker-compose -f docker-compose.development.yml run --rm artisan
