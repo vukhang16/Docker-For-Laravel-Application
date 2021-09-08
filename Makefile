@@ -9,4 +9,7 @@ start: compose-start
 stop: compose-stop
 check: compose-ps
 optimize: artisan-optimize-clear
-refresh: artisan-migrate-fresh-seeder
+db-refresh: artisan-migrate-fresh-seeder
+clean-storage:
+	- make npm-run-clean-storage
+	- make artisan-storage-link
