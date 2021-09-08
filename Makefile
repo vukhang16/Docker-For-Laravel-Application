@@ -11,5 +11,5 @@ check: compose-ps
 optimize: artisan-optimize-clear
 db-refresh: artisan-migrate-fresh-seeder
 clean-storage:
-	- make npm-run-clean-storage
+	- make npm-clean-storage
 	- make artisan-storage-link
