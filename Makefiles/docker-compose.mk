@@ -14,9 +14,3 @@ compose-stop:
 	- docker-compose -f docker-compose.development.yml stop
 compose-ps:
 	- docker ps
-composer-require:
-	- docker-compose -f docker-compose.development.yml run --rm composer require
-composer-update:
-	- docker-compose -f docker-compose.development.yml run --rm composer update
-composer-dump-autoload:
-	- docker-compose -f docker-compose.development.yml run --rm composer dump-autoload
