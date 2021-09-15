@@ -1,5 +1,3 @@
-npm:
-	- docker-compose -f docker-compose.development.yml run --rm npm install
 npm-install:
 	- docker-compose -f docker-compose.development.yml run --rm npm install
 npm-run-dev:
