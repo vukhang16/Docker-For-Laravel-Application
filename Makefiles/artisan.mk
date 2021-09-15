@@ -1,5 +1,3 @@
-artisan:
-	- docker-compose -f docker-compose.development.yml run --rm artisan
 artisan-storage-link:
 	- docker-compose -f docker-compose.development.yml run --rm artisan storage:link
 artisan-migrate:

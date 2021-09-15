@@ -1,5 +1,3 @@
-compose:
-	- docker-compose -f docker-compose.development.yml
 compose-up: 
 	- docker-compose -f docker-compose.development.yml up
 compose-up-d:
