@@ -5,7 +5,7 @@ up:
 	- make composer-install
 	- make npm-install
 	- make artisan-storage-link
-	- make refresh
+	- make db-refresh
 down: compose-down-rmi-local
 start: compose-start
 stop: compose-stop
