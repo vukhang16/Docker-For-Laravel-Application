@@ -2,6 +2,8 @@ include ./Makefiles/*.mk
 
 up: 
 	- make compose-up-d
+	- make composer-install
+	- make npm-install
 	- make artisan-storage-link
 	- make refresh
 down: compose-down-rmi-local
