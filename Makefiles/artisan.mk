@@ -14,3 +14,11 @@ artisan-route-list:
 	- docker-compose -f docker-compose.development.yml run --rm artisan route:list
 artisan-tinker:
 	- docker-compose -f docker-compose.development.yml run --rm artisan tinker
+artisan-config-cache:
+	- docker-compose -f docker-compose.development.yml run --rm artisan config:cache
+artisan-route-cache:
+	- docker-compose -f docker-compose.development.yml run --rm artisan route:cache
+artisan-view-cache:
+	- docker-compose -f docker-compose.development.yml run --rm artisan view:cache
+artisan-key-generate:
+	- docker-compose -f docker-compose.development.yml run --rm artisan key:generate

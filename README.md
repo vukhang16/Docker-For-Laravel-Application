@@ -38,6 +38,14 @@ Three additional containers are included that handle Composer, NPM, and Artisan 
 
 or use target of `Makefile`
 
+### Deploy to server
+
+Run commands in your terminal
+```
+chmod +x ./deploy-production.sh
+./deploy-production.sh
+```
+
 ## Using BrowserSync with Laravel Mix
 
 If you want to enable the hot-reloading that comes with Laravel Mix's BrowserSync option, you'll have to follow a few small steps. First, ensure that you're using the updated `docker-compose.yml` with the `:3000` and `:3001` ports open on the npm service. Then, add the following to the end of your Laravel project's `webpack.mix.js` file:

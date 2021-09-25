@@ -10,8 +10,12 @@ down: compose-down-rmi-local
 start: compose-start
 stop: compose-stop
 check: compose-ps
-optimize: artisan-optimize-clear
 db-refresh: artisan-migrate-fresh-seeder
+optimize: artisan-optimize-clear
 clean-storage:
 	- make npm-clean-storage
 	- make artisan-storage-link
+artisan-cache:
+	- make artisan-config-cache
+	- make artisan-route-cache
+	- make artisan-view-cache

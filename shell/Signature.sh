@@ -1,7 +1,8 @@
 #!/bin/bash
 
 echo "
-Developed by KingNNT 
+------------------------------------------------------------------------------
+Developed by KingNNT
 
 Author's informations:
 	- Email: Dev.KingNNT@gmail.com
@@ -12,12 +13,7 @@ Author's informations:
 	- Github Profile: https://github.com/KingNNT
 	- Gitlap Profile: https://gitlab.com/Dev.KingNNT
 	- Bitbucket Profile: https://bitbucket.org/KingNNT/
-"
 
-chmod -R 777 ./src
-cp ./.env.production ./.env
-cp ./src/.env.production ./src/.env
-make up
-make artisan-key-generate
-make npm-run-production
-make optimize
+Donate or pay me at: https://github.com/KingNNT/KingNNT/blob/master/Donate.md
+------------------------------------------------------------------------------
+"

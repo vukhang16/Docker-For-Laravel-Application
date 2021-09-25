@@ -1,5 +1,7 @@
 npm-install:
 	- docker-compose -f docker-compose.development.yml run --rm npm install
+npm-install-production:
+	- docker-compose -f docker-compose.development.yml run --rm npm install --production
 npm-run-dev:
 	- docker-compose -f docker-compose.development.yml run --rm npm run dev
 npm-run-watch:
