@@ -1,16 +1,16 @@
 compose-up: 
-	- docker-compose -f docker-compose.development.yml up
+	- docker-compose -f ${DOCKER_COMPOSE_FILE} up
 compose-up-d:
-	- docker-compose -f docker-compose.development.yml up -d
+	- docker-compose -f ${DOCKER_COMPOSE_FILE} up -d
 compose-down:
-	- docker-compose -f docker-compose.development.yml down
+	- docker-compose -f ${DOCKER_COMPOSE_FILE} down
 compose-down-rmi-local:
-	- docker-compose -f docker-compose.development.yml down --rmi local
+	- docker-compose -f ${DOCKER_COMPOSE_FILE} down --rmi local
 compose-destroy:
-	- docker-compose -f docker-compose.development.yml down --rmi local
+	- docker-compose -f ${DOCKER_COMPOSE_FILE} down --rmi local
 compose-start:
-	- docker-compose -f docker-compose.development.yml start
+	- docker-compose -f ${DOCKER_COMPOSE_FILE}.yml start
 compose-stop:
-	- docker-compose -f docker-compose.development.yml stop
+	- docker-compose -f ${DOCKER_COMPOSE_FILE} stop
 compose-ps:
 	- docker ps
