@@ -11,8 +11,6 @@ Với file `.env` khi clone về sẽ chưa có, bạn sẽ cần tạo nó từ
 
 ## Giải thích ý nghĩa env
 
-### Payment History:
-
 | ID  |        Tên Env         |                               Ý Nghĩa                               |                           Giá trị hợp lệ                           |
 | :-: | :--------------------: | :-----------------------------------------------------------------: | :----------------------------------------------------------------: |
 |  1  | SERVER_MODE_ENVIROMENT |                        Hiện trạng của server                        |                    "development", "production"                     |
