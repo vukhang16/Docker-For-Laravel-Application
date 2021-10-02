@@ -14,7 +14,7 @@ Với file `.env` khi clone về sẽ chưa có, bạn sẽ cần tạo nó từ
 | ID  |        Tên Env         |                               Ý Nghĩa                               |                           Giá trị hợp lệ                           |
 | :-: | :--------------------: | :-----------------------------------------------------------------: | :----------------------------------------------------------------: |
 |  1  | SERVER_MODE_ENVIROMENT |                        Hiện trạng của server                        |                    "development", "production"                     |
-|  2  |    SERVER_USERNAME     |     Tên user sẽ được tạo mới khi chạy với môi trường production     |                          username hợp lế                           |
+|  2  |    SERVER_USERNAME     |     Tên user sẽ được tạo mới khi chạy với môi trường production     |                          username hợp lệ                           |
 |  3  |   LETS_ENCRYPT_EMAIL   | Email sẽ được đăng ký với [Let's Encrypt](https://letsencrypt.org/) |                            email hợp lệ                            |
 |  4  |         DOMAIN         |                    Domain đăng ký chứng chỉ ssl                     |                           domain hợp lệ                            |
 |  5  |        APP_NAME        |                         Tên của application                         |                                                                    |
