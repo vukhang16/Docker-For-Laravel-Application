@@ -7,12 +7,13 @@ do
     case $opt in
         "Docker")
             ./shell/install/docker/install.sh
+            break
             ;;
         "SSL")
-            echo "SSL"
             ;;
         "SWAP")
             ./install/swap/run.sh
+            break
             ;;
         "Quit")
             break

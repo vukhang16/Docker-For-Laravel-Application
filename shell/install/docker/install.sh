@@ -7,9 +7,10 @@ do
     case $opt in
         "CentOS")
             ./shell/install/docker/centos.sh
+            break
             ;;
         "Quit")
-            exit
+            break
             ;;
         *) echo "Invalid option $REPLY";;
     esac
