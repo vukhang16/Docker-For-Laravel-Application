@@ -1,3 +1,4 @@
+include .env
 include ./Makefiles/*.mk
 
 up: 
