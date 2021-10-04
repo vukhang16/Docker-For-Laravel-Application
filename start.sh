@@ -2,7 +2,8 @@
 
 cp ./.env.production ./.env
 sudo chmod -R 755 ./shell
-./shell/help/Signature.sh
+./shell/help/signature.sh
+source ./shell/help/enviroment.sh
 
 PS3='Please enter your choice: '
 options=("Install" "Deploy" "Quit")
@@ -11,9 +12,11 @@ do
     case $opt in
         "Install")
 			./shell/install.sh
+            break
             ;;
         "Deploy")
             ./shell/deploy/run.sh
+            break
             ;;
         "Quit")
             break
