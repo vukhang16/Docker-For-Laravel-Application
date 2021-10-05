@@ -12,7 +12,7 @@ do
         "SSL")
             ;;
         "SWAP")
-            ./install/swap/run.sh
+            ./shell/install/swap/run.sh
             break
             ;;
         "Quit")
