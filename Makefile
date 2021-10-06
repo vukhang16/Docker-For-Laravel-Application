@@ -20,3 +20,14 @@ artisan-cache:
 	- make artisan-config-cache
 	- make artisan-route-cache
 	- make artisan-view-cache
+deploy:
+	- make compose-up-d
+	- make npm-clean-storage
+	- make npm-install
+	- make composer-install-production-mode
+	- make artisan-storage-link
+	- make artisan-key-generate
+	- make npm-run-production
+	- make artisan-cache
+	- make optimize
+	- make db-refresh

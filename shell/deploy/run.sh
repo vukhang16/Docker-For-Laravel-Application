@@ -13,16 +13,7 @@ if ! [ -x "$(command -v docker-compose)" ]; then
 	exit 1
 fi
 
-make compose-up-d
-make npm-clean-storage
-make npm-install
-make composer-install-production-mode
-make artisan-storage-link
-make artisan-key-generate
-make npm-run-production
-make artisan-cache
-make optimize
-make db-refresh
+make deploy
 
 chmod -R 755 ./src
 chmod -R 777 ./src/storage
